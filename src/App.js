@@ -108,7 +108,7 @@ class App extends React.Component {
   updateInfo = () => {
     const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
     let cityName = this.state.city;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
         .then(function (response) {
           return response.json()
         })
